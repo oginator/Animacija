@@ -1,0 +1,66 @@
+body {
+    background:  #050210;
+}
+
+
+
+.circle {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(90deg,#fb5dad 0%, #55fb9f 35%,#b97aff 100%);
+    margin: 200px auto;
+    padding: 16px;
+    border-radius: 50%;
+    
+    
+
+    animation-name: my-animation;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-timing-function: linear;
+}
+
+
+.circle:after {
+    content: '';
+    position: absolute;
+    top: 55px;
+    right: 55px;
+    bottom: 55px;
+    left: 55px;
+    border-radius: 50%;
+    background-color: black;
+    box-shadow: inset 0px 0px 100px gray;
+}
+
+.circle:before {
+    content: '';
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    bottom: -15px;
+    left: -15px;
+    border-radius: 50%;
+    background: linear-gradient(90deg,#fb5dad 0%, #55fb9f 35%,#b97aff 100%);
+    filter: blur(55px);
+    
+}
+
+    @keyframes my-animation {
+            from{
+                    transform: rotate(0deg);
+                    width: 500px;
+                    height: 500px;
+                }
+            to {
+                    transform: rotate(360deg);
+                    width: 500px;
+                    height: 500px;
+               }
+            }
+
+
+    
